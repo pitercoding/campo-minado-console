@@ -1,0 +1,44 @@
+# ==============================
+# Build / IDE files
+# ==============================
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# ==============================
+# IntelliJ IDEA
+# ==============================
+
+# Ignore workspace-specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/shelf
+.idea/httpRequests
+.idea/gradle.xml
+.idea/jsLibraryMappings.xml
+
+# Keep project and module configuration
+.idea/misc.xml
+.idea/modules.xml
+*.iml
+.idea/vcs.xml
+
+# ==============================
+# OS-specific
+# ==============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
