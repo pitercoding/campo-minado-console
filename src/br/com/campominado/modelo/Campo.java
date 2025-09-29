@@ -69,4 +69,21 @@ public class Campo {
     boolean vizinhancaSegura() {
         return  vizinhos.stream().noneMatch(v -> v.minado);
     }
+
+    void minar() {
+        minado = true;
+    }
+
+    // Usando boolean o mais comum é usar a nomenclatura isXXX(). Funciona como getter
+    public boolean isMarcado() {
+        return marcado;
+    }
+
+    public boolean isAberto() {
+        return aberto;
+    }
+
+    public boolean isFechado() {
+        return !isAberto();
+    }
 }
