@@ -118,17 +118,29 @@ public class Campo {
         marcado = false;
     }
 
+    @Override
     public String toString() {
-        if(marcado) {
-            return "x";
-        } else if(aberto && minado) {
-            return "*";
-        } else if(aberto && minasNaVizinhanca() > 0) {
-            return Long.toString(minasNaVizinhanca());
-        } else if(aberto) {
-            return " ";
+        final String RESET = "\u001B[0m";
+        String cor;
+
+        if (marcado) {
+            return "\u001B[33mx\u001B[0m"; // amarelo para bandeira
+        } else if (aberto && minado) {
+            return "\u001B[31m*\u001B[0m"; // vermelho para mina
+        } else if (aberto && minasNaVizinhanca() > 0) {
+            long minas = minasNaVizinhanca();
+            switch ((int) minas) {
+                case 1: cor = "\u001B[34m"; break; // azul
+                case 2: cor = "\u001B[32m"; break; // verde
+                case 3: cor = "\u001B[31m"; break; // vermelho
+                case 4: cor = "\u001B[35m"; break; // roxo
+                default: cor = "\u001B[36m"; break; // ciano para 5+
+            }
+            return cor + minas + RESET;
+        } else if (aberto) {
+            return " "; // campo aberto vazio
         } else {
-            return "?";
+            return "?"; // campo fechado
         }
     }
 }
