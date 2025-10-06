@@ -1,6 +1,6 @@
-# 💣 Campo Minado Java
+# 💣 Campo Minado Console
 
-Um jogo clássico de **Campo Minado** implementado em **Java** para rodar no console, com suporte a **cores ANSI** para melhorar a experiência no terminal.
+Um jogo clássico de **Campo Minado** implementado em **Java** para rodar no **console**, com suporte a **cores ANSI** para melhorar a experiência no terminal.
 
 Projeto desenvolvido como exercício prático durante o curso de **Java da Cod3r**.
 
@@ -49,8 +49,8 @@ campo-minado-java/
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/seu-usuario/campo-minado-java.git
-cd campo-minado-java
+git clone https://github.com/pitercoding/campo-minado-console.git
+cd campo-minado-console
 ```
 ### 2. Compilar os arquivos .java
 ```bash
